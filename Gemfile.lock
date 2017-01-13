@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/bmabey/database_cleaner.git
+  revision: 05d4d8510bb47616e8f35aec5f743af633758381
+  specs:
+    database_cleaner (1.5.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -91,6 +97,7 @@ PLATFORMS
 
 DEPENDENCIES
   capybara
+  database_cleaner!
   factory_girl
   poltergeist
   rack-test
