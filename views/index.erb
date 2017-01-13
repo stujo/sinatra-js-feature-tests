@@ -1,0 +1,24 @@
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<form id="form_8ball" action="/answer" method="POST">
+  <input type="hidden" name="secret" value="asda"/>
+  <input id="button_go" value="Ask the Eight Ball" type="submit"/>
+</form>
+<div id="answer_div"></div>
+<script>
+  "use strict";
+  $('#form_8ball').submit(function(event){
+    event.preventDefault();
+    var $form = $(event.target);
+    var data = $form.serialize();
+    $.post("/answer", data, function(html) {
+         console.log(html);
+         $('#answer_div').html(html);
+      });
+    });
+</script>
+</body>
+</html>
