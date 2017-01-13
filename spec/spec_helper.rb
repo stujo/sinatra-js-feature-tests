@@ -6,6 +6,8 @@ def app
   Sinatra::Application
 end
 
+require_relative './capybara_helper'
+
 RSpec.configure do |config|
   require_relative './database_cleaner_helper'
   configure_database_cleaner(config)
